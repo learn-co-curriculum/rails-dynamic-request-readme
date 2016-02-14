@@ -12,7 +12,7 @@ This is mapped to the `static` controller and `about` action, which renders the 
 
 ## Dynamic Requests
 
-If you are comfortable with how static requests you will pick up on dynamic requests quickly. If we,  according to REST, wanted to get the post with the id of `42` we would go to `/posts/42`. So you could create a new line in your routes file for each post... but that would get ridiculous and you would have to modify your web server every time someone posts. So! we have dynamic routes. A breakdown of what is happening is below:
+If you are comfortable with how static requests work you will pick up on dynamic requests quickly. If we,  according to REST, wanted to get the post with the id of `42` we would go to `/posts/42`. So you could create a new line in your routes file for each post... but that would get ridiculous and you would have to modify your web server every time someone posts. So! we have dynamic routes. A breakdown of what is happening is below:
 
 1. The `routes.rb` file takes in the request and processes it like normal, except this time it also parses the `42` as a parameter and passes it to the posts' controller.
 
@@ -146,4 +146,6 @@ We will go into detail on what the `resources` method does in a future lesson, f
 
 Running the tests for a final time you can see that they're all still passing, nice work!
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-dynamic-request-readme' title='Rails Dynamic Request'>Rails Dynamic Request</a> on Learn.co and start learning to code for free.</p>
+<a href='https://learn.co/lessons/rails-dynamic-request-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-dynamic-request-readme'>Rails Dynamic Request</a> on Learn.co and start learning to code for free.</p>
