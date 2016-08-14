@@ -54,7 +54,9 @@ Running `rspec` gives us an expected error of: `ActionController::RoutingError: 
 get 'posts/:id', to: 'posts#show'
 ```
 
-Here you will notice something that's different from the static route, the `/:id` tells the routing system that this route can receive a parameter, and that parameter will be passed to the controller's show action. With this route in place let's run our tests again, you will see we get a different failure this time that says: `AbstractController::ActionNotFound: The action 'show' could not be found for PostsController`. This means that we need to create a corresponding `show` action in the posts' controller, let's get this failure fixed with the code below:
+Here you will notice something that's different from the static route. The `/:id` tells the routing system that this route can receive a parameter and that the parameter will be passed to the controller's show action. With this route in place, let's run our tests again.
+
+You should see a new failure this time: `ActionController::RoutingError: uninitialized constant PostsController`. Once we stub out a `PostsController` class in `app/controllers/posts_controller.rb`, running the tests again will give us yet another new failure: `AbstractController::ActionNotFound: The action 'show' could not be found for PostsController`. This means that we need to create a corresponding `show` action in the PostsController. Let's get this failure fixed with the code below:
 
 ```ruby
 # app/controllers/posts_controller.rb
