@@ -76,9 +76,7 @@ Running the tests now and we're all green, which means that the request will be 
 
 If you start the Rails server and navigate to `/posts/1` or anything `post` record the router will know what you're talking about, however the controller needs to be told what to do with the `id`.
 
-Now that we have the routing configured, let's build a test (this version currently has the test already written in)
-
-to see if the post content is rendered on the show page with the title being in an `h1` tag and the description in a `p` tag, below are the scenarios:
+Now that we have the routing configured, let's build a test to see if the post content is rendered on the show page with the title being in an `h1` tag and the description in a `p` tag, below are the scenarios:
 
 ```ruby
 # spec/features/post_spec.rb
